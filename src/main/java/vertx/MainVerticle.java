@@ -11,7 +11,7 @@ public class MainVerticle extends AbstractVerticle {
   @Override
   public void start(Promise<Void> startPromise) throws Exception {
     Router router = Router.router(vertx);
-      router.route("/assets`/*").handler(StaticHandler.create("argon-dashboard-master/assets"));
+      router.route("/assets/*").handler(StaticHandler.create("argon-dashboard-master/assets"));
 
       router.route("/").handler(routingContext -> {
           HttpServerResponse response = routingContext.response();
